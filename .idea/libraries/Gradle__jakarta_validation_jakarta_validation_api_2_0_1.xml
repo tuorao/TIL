@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: jakarta.validation:jakarta.validation-api:2.0.1">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.1/5a864a58587cd76243b8ec55dd7115c9eac25c08/jakarta.validation-api-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/jakarta.validation/jakarta.validation-api/2.0.1/56f21cc15c2d307b5438ffef507ce42b740efeea/jakarta.validation-api-2.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
