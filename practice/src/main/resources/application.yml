@@ -7,6 +7,8 @@ spring:
     username: sa
     password:
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:~/test_database;AUTO_SERVER=true
+    url: jdbc:h2:tcp://localhost/~/test_database
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create
