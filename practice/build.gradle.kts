@@ -41,6 +41,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test") {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
+    implementation("io.github.microutils:kotlin-logging:1.7.6")
 }
 
 tasks.withType<Test> {
