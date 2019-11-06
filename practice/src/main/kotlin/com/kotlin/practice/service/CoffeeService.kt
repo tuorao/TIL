@@ -7,7 +7,7 @@ import org.springframework.stereotype.Service
 @Service
 class CoffeeService(val coffeeRepository: CoffeeRepository) {
 
-    fun getCoffeeAndName() = coffeeRepository.findAll()
+    fun getCoffeeNameAndCost() = coffeeRepository.findAll()
             .joinToString { coffee -> Coffee.nameAndCost(coffee.cost, coffee.name)}
 
     fun init(): MutableList<Coffee> = coffeeRepository.saveAll(listOf(
@@ -15,4 +15,5 @@ class CoffeeService(val coffeeRepository: CoffeeRepository) {
             Coffee(null, 700, "라떼"),
             Coffee(null, 900, "헤이즐넛")
     ))
+    fun save(coffee: Coffee) = coffeeRepository.save(coffee)
 }

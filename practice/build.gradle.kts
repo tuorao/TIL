@@ -42,6 +42,7 @@ dependencies {
         exclude(group = "org.junit.vintage", module = "junit-vintage-engine")
     }
     implementation("io.github.microutils:kotlin-logging:1.7.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
 }
 
 tasks.withType<Test> {
