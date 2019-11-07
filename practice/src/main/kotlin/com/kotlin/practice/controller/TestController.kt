@@ -1,6 +1,7 @@
 package com.kotlin.practice.controller
 
 import com.kotlin.practice.model.Coffee
+import com.kotlin.practice.model.constValue
 import com.kotlin.practice.service.CoffeeService
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.delay
@@ -17,6 +18,7 @@ class TestController(val coffeeService: CoffeeService) {
     @GetMapping("/")
     fun getCoffeeNameAndCost(): String {
         logger.info("getCoffee Test")
+        logger.info("전역변수 : {}", constValue)
 
         coffeeService.init()
 
