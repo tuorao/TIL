@@ -1,10 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
-
 plugins {
     id("org.springframework.boot") version "2.2.0.RELEASE"
     id("io.spring.dependency-management") version "1.0.8.RELEASE"
+    id("org.jlleitschuh.gradle.ktlint") version "9.1.0"
     kotlin("jvm") version "1.3.50"
     kotlin("plugin.spring") version "1.3.50"
     kotlin("plugin.jpa") version "1.3.50"
@@ -26,6 +26,7 @@ configurations {
 
 repositories {
     mavenCentral()
+    maven(url = "https://plugins.gradle.org/m2/")
 }
 
 dependencies {
@@ -43,6 +44,7 @@ dependencies {
     }
     implementation("io.github.microutils:kotlin-logging:1.7.6")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core")
+    implementation("org.jlleitschuh.gradle:ktlint-gradle:9.1.0")
 }
 
 tasks.withType<Test> {
@@ -56,4 +58,15 @@ tasks.withType<KotlinCompile> {
     }
 }
 
-
+ktlint {
+    verbose.set(true)
+    outputToConsole.set(true)
+    coloredOutput.set(true)
+    reporters {
+        reporter(ReporterType.CHECKSTYLE)
+        reporter(ReporterType.JSON)
+    }
+    filter {
+        exclude("**/style-violations.kt")
+    }
+}
