@@ -9,5 +9,4 @@ var handler = function(request, response) {
     response.end("hit " + os.hostname() + "\n"); 
 }
 
-var www = http.createServer(handler);
-wwww.listen(8080);
+http.createServer(handler).listen(8081);
