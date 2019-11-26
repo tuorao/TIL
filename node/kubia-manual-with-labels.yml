@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-manual
+  labels:
+    creation_method: manual
+    env: prod
+spec:
+  containers:
+  - image: asia.gcr.io/trusty-acronym-259304/kubia
+    name: kubia
+    ports:
+    - containerPort: 8081
+      protocol: TCP
