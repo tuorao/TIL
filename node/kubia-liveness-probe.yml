@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: kubia-liveness
+spec:
+  containers:
+  - image: asia.gcr.io/trusty-acronym-259304/kubia
+    name: kubia
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8081
