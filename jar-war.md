@@ -20,3 +20,5 @@ WAR 파일을 실행하려면 Tomcat과 같은 WAS가 필요하다
 
 - Spring → SpringBoot로 넘어오면서 Embedded Tomcat이 내장되어 있기 때문에 
 StandAlone 으로 어플리케이션을 구동 시키기 때문에 WAR 보다는 JAR가 적합해서
+
+ㅎㅎ
