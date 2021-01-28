@@ -17,6 +17,6 @@
 - JVM은 생성된 객체들의 생성순서를 표현하기 위해 메모리를 여러 영역으로 나눔
 
 ![iimage](https://github.com/tuorao/TIL/blob/master/JVMObjectLifecycle.png?raw=true)
-객체 생성 -> Young Generation의 일부인 Eden에 위치 -> 여기서 살아남으면 Survivor 영역으로 이동 
+- 객체 생성 -> Young Generation의 일부인 Eden에 위치 -> 여기서 살아남으면 Survivor 영역으로 이동 
 -> Major GC가 발생할때마다 Survivor1 <-> Survivor2 로 이동되고, 이 과정에서 더이상 참조되지 않는 객체는 제거됨
 -> Major GC 발생동안 살아남은 객체들은 Old Generation으로 이동하며 OG에서 미사용으로 판별된 객체는 Full GC를 통해 메모리에서 
